@@ -34,6 +34,7 @@ item.touhou_little_maid.album.name=相册
 item.touhou_little_maid.maid_beacon.name=神社庭灯
 item.touhou_little_maid.spell_card.name=符卡
 item.touhou_little_maid.debug_danmaku.name=调试弹幕工具
+item.touhou_little_maid.npc_maid_tool.name=NPC 女仆工具
 
 # Block
 tile.touhou_little_maid.garage_kit.name=手办
@@ -98,6 +99,7 @@ message.touhou_little_maid.broom.message=只有创造模式玩家可以骑乘，
 message.touhou_little_maid.debug_danmaku.type=当前类型：%s
 message.touhou_little_maid.owner_maid_num.can_not_add=你无法再驯服女仆，你已经达到了上限（%d/%d）
 message.touhou_little_maid.change_model.disabled=皮肤切换功能已被禁止
+message.touhou_little_maid.npc_maid_tool.not_maid_model=请将此 NPC 设置为女仆模型
 
 # Info
 info.touhou_little_maid.maid.unset_pos=§6§l未设置坐标
@@ -135,6 +137,7 @@ config.touhou_little_maid.misc_config.player_death_loss_power_point=玩家死亡
 config.touhou_little_maid.misc_config.creative_player_can_ride_broom=只有创造模式玩家可以骑乘扫帚
 config.touhou_little_maid.misc_config.power_point_hud_x=P 点 X 位置
 config.touhou_little_maid.misc_config.power_point_hud_y=P 点 Y 位置
+config.touhou_little_maid.misc_config.override_npc_render=覆盖 NPC 渲染
 
 # Danmaku Type
 danmaku_type.touhou_little_maid.pellet=点弹
@@ -310,6 +313,7 @@ model.touhou_little_maid.toramaru_shou.name=寅丸星
 model.touhou_little_maid.toyosatomimi_no_miko.name=丰聪耳神子
 model.touhou_little_maid.kaku_seiga.name=霍青娥
 model.touhou_little_maid.mononobe_no_futo.name=物部布都
+model.touhou_little_maid.hutatsuiwa_mamizou.name=二岩猯藏
 
 model.touhou_little_maid.hakurei_reimu.desc=§7乐园的巫女
 model.touhou_little_maid.yakumo_ran.desc=§7隙间妖怪的式神
@@ -387,6 +391,7 @@ model.touhou_little_maid.toramaru_shou.desc=§7毘沙门天的弟子
 model.touhou_little_maid.toyosatomimi_no_miko.desc=§7圣德道士
 model.touhou_little_maid.kaku_seiga.desc=§7穿墙的邪仙
 model.touhou_little_maid.mononobe_no_futo.desc=§7古代日本的尸解仙
+model.touhou_little_maid.hutatsuiwa_mamizou.desc=§7狸猫怪 十变化
 
 model.touhou_little_maid.cushion.name=坐垫
 model.touhou_little_maid.wheel_chair.name=轮椅
@@ -416,6 +421,7 @@ spell_card.touhou_little_maid:night_sign.night_bird.name=夜符「Night Bird」
 spell_card.touhou_little_maid:metal_sign.metal_fatigue.name=金符「Metal Fatigue」
 spell_card.touhou_little_maid:magic_sign.milky_way.name=魔符「Milky Way」
 spell_card.touhou_little_maid:border_sign.boundary_between_wave_and_particle.name=境符「波与粒的境界」
+spell_card.touhou_little_maid:border_sign.boundary_between_wave_and_particle_3d.name=境符「波与粒的境界」3D
 
 # Subtitle
 subtitle.touhou_little_maid.maid.mode.idle=女仆：空闲

@@ -7,6 +7,7 @@ import com.github.tartaricacid.touhoulittlemaid.client.renderer.entity.*;
 import com.github.tartaricacid.touhoulittlemaid.client.renderer.texture.HataTextureManager;
 import com.github.tartaricacid.touhoulittlemaid.client.resources.CustomHataTextureLoader;
 import com.github.tartaricacid.touhoulittlemaid.client.resources.CustomModelResources;
+import com.github.tartaricacid.touhoulittlemaid.config.GeneralConfig;
 import com.github.tartaricacid.touhoulittlemaid.danmaku.CustomSpellCardEntry;
 import com.github.tartaricacid.touhoulittlemaid.entity.item.EntityBox;
 import com.github.tartaricacid.touhoulittlemaid.entity.item.EntityChair;
@@ -33,11 +34,14 @@ import net.minecraftforge.client.resource.IResourceType;
 import net.minecraftforge.client.resource.ISelectiveResourceReloadListener;
 import net.minecraftforge.client.resource.VanillaResourceType;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import noppes.npcs.client.model.ModelPlayerAlt;
+import noppes.npcs.entity.EntityCustomNpc;
 
 import javax.annotation.Nonnull;
 import java.util.Map;
@@ -95,6 +99,14 @@ public class ClientProxy extends CommonProxy implements ISelectiveResourceReload
     @Override
     public void postInit(FMLPostInitializationEvent event) {
         super.postInit(event);
+        if (CommonProxy.isNpcModLoad() && GeneralConfig.MISC_CONFIG.overrideNpcRender) {
+            changeNpcRender();
+        }
+    }
+
+    @Optional.Method(modid = "customnpcs")
+    private void changeNpcRender() {
+        RenderingRegistry.registerEntityRenderingHandler(EntityCustomNpc.class, new EntityCustomNpcChangeRender<>(new ModelPlayerAlt(0.0F, false)));
     }
 
     /**

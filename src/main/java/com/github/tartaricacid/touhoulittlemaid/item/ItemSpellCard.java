@@ -5,7 +5,6 @@ import com.github.tartaricacid.touhoulittlemaid.danmaku.CustomSpellCardEntry;
 import com.github.tartaricacid.touhoulittlemaid.init.MaidItems;
 import com.github.tartaricacid.touhoulittlemaid.proxy.ClientProxy;
 import com.github.tartaricacid.touhoulittlemaid.proxy.CommonProxy;
-
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
@@ -53,9 +52,12 @@ public class ItemSpellCard extends Item {
         return spellCard;
     }
 
+    @Nullable
     @SuppressWarnings("all")
     public static CustomSpellCardEntry getCustomSpellCardEntry(ItemStack spellCard, Map<String, CustomSpellCardEntry> map) {
-        // FIXME: crash if map is empty
+        if (map.isEmpty()) {
+            return null;
+        }
         CustomSpellCardEntry defaultEntry = map.values().stream().findFirst().get();
         if (spellCard.getItem() == MaidItems.SPELL_CARD && spellCard.hasTagCompound()) {
             String id = spellCard.getTagCompound().getString(SPELL_CARD_ENTRY_TAG);
@@ -80,13 +82,19 @@ public class ItemSpellCard extends Item {
     public String getItemStackDisplayName(ItemStack stack) {
         Map<String, CustomSpellCardEntry> map = FMLCommonHandler.instance().getSide().isClient() ? ClientProxy.CUSTOM_SPELL_CARD_MAP_CLIENT : CommonProxy.CUSTOM_SPELL_CARD_MAP_SERVER;
         CustomSpellCardEntry entry = getCustomSpellCardEntry(stack, map);
-        return TextFormatting.GOLD + I18n.format(entry.getNameKey());
+        if (entry == null) {
+            return "";
+        }
+        return TextFormatting.GOLD + net.minecraft.util.text.translation.I18n.translateToLocal(entry.getNameKey());
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         CustomSpellCardEntry entry = getCustomSpellCardEntry(stack, ClientProxy.CUSTOM_SPELL_CARD_MAP_CLIENT);
+        if (entry == null) {
+            return;
+        }
         if (!entry.getDescriptionKey().isEmpty()) {
             tooltip.add(I18n.format(entry.getDescriptionKey()));
         }

@@ -34,6 +34,7 @@ item.touhou_little_maid.album.name=Album
 item.touhou_little_maid.maid_beacon.name=Shrine Lamp
 item.touhou_little_maid.spell_card.name=Spell Card
 item.touhou_little_maid.debug_danmaku.name=Debug Danmaku Tool
+item.touhou_little_maid.npc_maid_tool.name=NPC Maid Tool
 
 # Block
 tile.touhou_little_maid.garage_kit.name=Garage Kit
@@ -98,6 +99,7 @@ message.touhou_little_maid.broom.message=Only creative mode player can ride it, 
 message.touhou_little_maid.debug_danmaku.type=Current Type: %s
 message.touhou_little_maid.owner_maid_num.can_not_add=You can no longer tame maids, you have reached the limit (%d/%d)
 message.touhou_little_maid.change_model.disabled=Skin switch is disabled.
+message.touhou_little_maid.npc_maid_tool.not_maid_model=Please set this NPC model as maid model.
 
 # Info
 info.touhou_little_maid.maid.unset_pos=§6§lUnset Pos
@@ -135,6 +137,7 @@ config.touhou_little_maid.misc_config.player_death_loss_power_point=Player Death
 config.touhou_little_maid.misc_config.creative_player_can_ride_broom=Only Creative Player Can Ride Broom
 config.touhou_little_maid.misc_config.power_point_hud_x=Power Point HUD Position X
 config.touhou_little_maid.misc_config.power_point_hud_y=Power Point HUD Position Y
+config.touhou_little_maid.misc_config.override_npc_render=Override NPC Render
 
 # Danmaku Type
 danmaku_type.touhou_little_maid.pellet=Pellet
@@ -311,6 +314,7 @@ model.touhou_little_maid.toramaru_shou.name=Shou Toramaru
 model.touhou_little_maid.toyosatomimi_no_miko.name=Toyosatomimi no Miko
 model.touhou_little_maid.kaku_seiga.name=Seiga Kaku
 model.touhou_little_maid.mononobe_no_futo.name=Mononobe no Futo
+model.touhou_little_maid.hutatsuiwa_mamizou.name=Mamizou Futatsuiwa
 
 model.touhou_little_maid.hakurei_reimu.desc=§7Shrine Maiden of Paradise
 model.touhou_little_maid.yakumo_ran.desc=§7Shikigami of the Gap Youkai
@@ -388,6 +392,7 @@ model.touhou_little_maid.toramaru_shou.desc=§7Disciple of Bishamonten
 model.touhou_little_maid.toyosatomimi_no_miko.desc=§7Shoutoku Taoist
 model.touhou_little_maid.kaku_seiga.desc=§7The Wicked Hermit Who Passes Through Walls
 model.touhou_little_maid.mononobe_no_futo.desc=§7The Shikaisen from Ancient Japan
+model.touhou_little_maid.hutatsuiwa_mamizou.desc=§7The Bake-danuki with Ten Transformations
 
 model.touhou_little_maid.cushion.name=Cushion
 model.touhou_little_maid.wheel_chair.name=Wheel Chair
@@ -417,6 +422,7 @@ spell_card.touhou_little_maid:night_sign.night_bird.name=Night Sign "Night Bird"
 spell_card.touhou_little_maid:metal_sign.metal_fatigue.name=Metal Sign "Metal Fatigue"
 spell_card.touhou_little_maid:magic_sign.milky_way.name=Magic Sign "Milky Way"
 spell_card.touhou_little_maid:border_sign.boundary_between_wave_and_particle.name=Border Sign "Boundary Between Wave and Particle"
+spell_card.touhou_little_maid:border_sign.boundary_between_wave_and_particle_3d.name=Border Sign "Boundary Between Wave and Particle" 3D
 
 # Subtitle
 subtitle.touhou_little_maid.maid.mode.idle=Maid Idel Sound
