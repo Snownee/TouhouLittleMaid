@@ -35,6 +35,7 @@ item.touhou_little_maid.maid_beacon.name=神社庭灯
 item.touhou_little_maid.spell_card.name=符卡
 item.touhou_little_maid.debug_danmaku.name=调试弹幕工具
 item.touhou_little_maid.npc_maid_tool.name=NPC 女仆工具
+item.touhou_little_maid.substitute_jizo.name=替身地藏
 
 # Block
 tile.touhou_little_maid.garage_kit.name=手办
@@ -55,7 +56,7 @@ commands.touhou_little_maid.spell_card.reload=已经重载所有的符卡
 tooltips.touhou_little_maid.hakurei_gohei.desc=模式：%d
 tooltips.touhou_little_maid.hakurei_gohei.switch_mode.desc=按下 Alt 键并滑动鼠标滚轮切换模式。
 tooltips.touhou_little_maid.kappa_compass.usage.desc.1=右击方块设定坐标，而后右击女仆绑定坐标
-tooltips.touhou_little_maid.kappa_compass.usage.desc.2=需要配合女仆的 Home 模式使用
+tooltips.touhou_little_maid.kappa_compass.usage.desc.2=需要配合女仆的 Home 模式使用，Shift 右击女仆清除坐标
 tooltips.touhou_little_maid.kappa_compass.desc=坐标：%d，%d，%d
 tooltips.touhou_little_maid.damageable.desc=剩余使用次数：%d
 tooltips.touhou_little_maid.garage_kit.entity_id.desc=实体名称：%s
@@ -81,6 +82,7 @@ tooltips.touhou_little_maid.spell_card.author=作者：%s
 tooltips.touhou_little_maid.spell_card.version=版本：%s
 tooltips.touhou_little_maid.spell_card.cooldown=符卡冷却时间：%d ticks
 tooltips.touhou_little_maid.debug_danmaku.desc=仅用于调试
+tooltips.touhou_little_maid.substitute_jizo.desc=右击女仆使其无敌，仅限创造模式
 
 # Message
 message.touhou_little_maid.kappa_compass.write_success=坐标写入成功！
@@ -94,7 +96,8 @@ message.touhou_little_maid.photo.have_no_nbt_data=这鬼照片没有 NBT 数据�
 message.touhou_little_maid.altar.not_enough_power=你的 P 点不足。
 message.touhou_little_maid.tombstone.place_fail=墓碑放置失败！
 message.touhou_little_maid.tombstone.on_block_activated=墓碑已经被收回！
-message.touhou_little_maid.missing_patchouli=[{"text":"[Touhou Little Maid] ","color":"green","bold":true},{"text":"点击此处","color":"gold","underlined":true,"bold":false,"clickEvent":{"action":"open_url","value":"https://www.curseforge.com/minecraft/mc-mods/patchouli"},"hoverEvent":{"action":"show_text","value":"https://www.curseforge.com/minecraft/mc-mods/patchouli"}},{"text":"安装帕秋莉模组来获取手册","color":"yellow","bold":false}]
+message.touhou_little_maid.missing_patchouli=[{"text":"[车万女仆] ","color":"green","bold":true},{"text":"点击此处","color":"gold","underlined":true,"bold":false,"clickEvent":{"action":"open_url","value":"https://www.curseforge.com/minecraft/mc-mods/patchouli"},"hoverEvent":{"action":"show_text","value":"https://www.curseforge.com/minecraft/mc-mods/patchouli"}},{"text":"安装帕秋莉模组来获取手册","color":"yellow","bold":false}]
+message.touhou_little_maid.java_version_old=[{"text":"[车万女仆] ","color":"green","bold":true},{"text":"你的 Java 8 版本过低，符卡无法正常加载，建议使用 60 及以上版本的 Java。","color":"yellow","bold":false}]
 message.touhou_little_maid.broom.message=只有创造模式玩家可以骑乘，但是你可以修改配置文件关闭此限制
 message.touhou_little_maid.debug_danmaku.type=当前类型：%s
 message.touhou_little_maid.owner_maid_num.can_not_add=你无法再驯服女仆，你已经达到了上限（%d/%d）
@@ -151,6 +154,7 @@ danmaku_type.touhou_little_maid.amulet=札弹
 danmaku_type.touhou_little_maid.star=星弹
 danmaku_type.touhou_little_maid.big_star=大星弹
 danmaku_type.touhou_little_maid.petal=米弹
+danmaku_type.touhou_little_maid.knife=刀弹
 danmaku_type.touhou_little_maid.master_spark=魔炮
 danmaku_type.touhou_little_maid.bullet=铳弹
 danmaku_type.touhou_little_maid.kunai=苦无弹
@@ -415,6 +419,9 @@ model.touhou_little_maid.saisen_bako.name=赛钱箱
 model.touhou_little_maid.well.name=惊鹿
 model.touhou_little_maid.torii.name=鸟居
 model.touhou_little_maid.ema.name=绘马墙
+model.touhou_little_maid.anti_collision_bucket.name=防撞桶
+model.touhou_little_maid.park_bench.name=公园长椅
+model.touhou_little_maid.rinnosuke_children_toys.name=霖之助牌儿童摇摇乐
 
 # Spell Card
 spell_card.touhou_little_maid:night_sign.night_bird.name=夜符「Night Bird」
@@ -459,9 +466,11 @@ subtitle.touhou_little_maid.entity.box=盒子：打开
 # HWYLA & The One Probe
 hwyla.touhou_little_maid.entity_maid.task=当前模式：%s
 hwyla.touhou_little_maid.entity_maid.has_sasimono=拥有旗指物
+hwyla.touhou_little_maid.entity_maid.invulnerable=无敌
 hwyla.touhou_little_maid.tombstone.maid_owner=女仆主人：%s
 top.touhou_little_maid.entity_maid.task=当前模式：
 top.touhou_little_maid.entity_maid.has_sasimono=拥有旗指物
+top.touhou_little_maid.entity_maid.invulnerable=无敌
 top.touhou_little_maid.tombstone.maid_owner=女仆主人：%s
 
 # JEI
@@ -475,6 +484,3 @@ jei.touhou_little_maid.altar_craft.spawn_light_bolt.result=生成闪电
 # Patchouli
 patchouli.touhou_little_maid.book.name=记忆中的幻想乡
 patchouli.touhou_little_maid.book.landing_text=一个与女仆和东方 Project 有关的模组。$(br2)感谢 Snownee 在代码方面的帮助。$(br)感谢 Succinum，ZeniCrow，Paulzzh，Tian_mi 以及其他美工制作了如此优秀的模型和材质。$(br)感谢 Little Maid Mob 的作者 Verclene。
-danmaku_type.touhou_little_maid.knife=刀弹
-# Touhou Little Mod Language File
-item_group.touhou_little_maid.name=车万女仆
